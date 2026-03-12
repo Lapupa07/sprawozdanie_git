@@ -1,1 +1,49 @@
-Pierwsza linia tekstu
+SPRAWOZDANIE – Git i GitHub
+
+Etap 1: Lokalna baza i Remote
+
+Najpierw utworzyłem repozytorium Git w terminalu poleceniem:
+git init
+
+Następnie utworzyłem plik zadanie.txt i dodałem go do repozytorium:
+git add zadanie.txt
+
+Po dodaniu pliku wykonałem pierwszy commit:
+git commit -m "Initial commit"
+
+Potem połączyłem lokalne repozytorium z repozytorium na GitHubie:
+git remote add origin [URL_REPOZYTORIUM]
+
+Na końcu wysłałem pliki do repozytorium na GitHub:
+git push -u origin main
+
+
+Etap 2: Gałęzie (Branches) i Scalanie (Merge)
+
+Utworzyłem nową gałąź i przełączyłem się na nią poleceniem:
+git checkout -b feature-test
+
+W pliku zadanie.txt dopisałem dodatkową linię tekstu.
+
+Następnie zapisałem zmiany:
+git add .
+git commit -m "Zmiana na galezi"
+
+Potem wróciłem do głównej gałęzi:
+git checkout main
+
+Scaliłem zmiany z gałęzi feature-test do main:
+git merge feature-test
+
+Po zakończeniu usunąłem niepotrzebną gałąź:
+git branch -d feature-test
+
+
+Etap 3: Pobieranie i synchronizacja (Pull)
+
+Na stronie GitHub edytowałem plik zadanie.txt (ikona ołówka) i dopisałem na końcu nową linię tekstu. Następnie zapisałem zmiany jako commit.
+
+W terminalu pobrałem aktualne zmiany z repozytorium poleceniem:
+git pull origin main
+
+Po wykonaniu polecenia sprawdziłem zawartość pliku zadanie.txt i zobaczyłem, że zmiana wykonana na stronie GitHub pojawiła się również w moim lokalnym repozytorium.
